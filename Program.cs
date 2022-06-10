@@ -37,7 +37,7 @@ namespace coding_exercise_rts_labs
             }
             else if (args.Length == 2)
             {
-                string result = stringRotation(args[0], int.Parse(args[1]));
+                string result = stringRotation(args[0].Trim('"', ','), int.Parse(args[1]));
             }
             else
             {
@@ -89,7 +89,26 @@ namespace coding_exercise_rts_labs
             // - value is null or empty
             // - value has a length of 1
 
-            return string.Empty;
+            if (string.IsNullOrEmpty(value) || value.Length == 1)
+            {
+                return value;
+            }
+
+            string result = "";
+
+            rotationAmount %= value.Length;
+
+            for (int i = value.Length - 1 - rotationAmount; i < value.Length; i++)
+            {
+                result += value[i];
+            }
+
+            for (int i = 0; i < value.Length - 1 - rotationAmount; i++)
+            {
+                result += value[i];
+            }
+
+            return result;
         }
     }
 }
