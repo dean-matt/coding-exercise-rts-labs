@@ -39,8 +39,19 @@ namespace coding_exercise_rts_labs
             }
         }
 
-        static Dictionary<string, int> aboveBelow(int[] integers, int value)
+        static Dictionary<string, int> aboveBelow(int[] array, int comparisonValue)
         {
+            // How to solve:
+            // - Compare the values in array to comparisonValue
+            //   - Save the value if is above or below comparisonValue
+            //
+            // Edge Cases:
+            // - array conains no values that are above comparisonValue
+            // - array contains no values that are below comparisonValue
+            // - array contains no values that are above or below comparisonValue
+            // - array contains no values
+            // - array contains a single value
+
             return new Dictionary<string, int>();
         }
     }
