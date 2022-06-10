@@ -80,6 +80,15 @@ namespace coding_exercise_rts_labs
 
         static string stringRotation(string value, int rotationAmount)
         {
+            // How to solve:
+            // - Retrieve and saved part of value to rotate
+            // - Build result from saved part and original string
+            //
+            // Edge Cases:
+            // - rotationAmount is greater than the length of the string
+            // - value is null or empty
+            // - value has a length of 1
+
             return string.Empty;
         }
     }
