@@ -38,6 +38,7 @@ namespace coding_exercise_rts_labs
             else if (args.Length == 2)
             {
                 string result = stringRotation(args[0].Trim('"', ','), int.Parse(args[1]));
+                Console.WriteLine($"{result}");
             }
             else
             {
@@ -97,13 +98,14 @@ namespace coding_exercise_rts_labs
             string result = "";
 
             rotationAmount %= value.Length;
+            // Console.WriteLine($"RotationAmount: {rotationAmount}");
 
-            for (int i = value.Length - 1 - rotationAmount; i < value.Length; i++)
+            for (int i = value.Length - rotationAmount; i < value.Length; i++)
             {
                 result += value[i];
             }
 
-            for (int i = 0; i < value.Length - 1 - rotationAmount; i++)
+            for (int i = 0; i < value.Length - rotationAmount; i++)
             {
                 result += value[i];
             }
