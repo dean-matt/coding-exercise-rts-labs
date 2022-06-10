@@ -7,7 +7,7 @@ namespace coding_exercise_rts_labs
     {
         static void Main(string[] args)
         {
-            if (args.Length <= 2 && args[0].StartsWith("["))
+            if (args.Length >= 2 && args[0].StartsWith("["))
             {
                 string[] parsedArg = new string[args.Length - 1];
 
@@ -37,6 +37,7 @@ namespace coding_exercise_rts_labs
             }
             else if (args.Length == 2)
             {
+                Console.WriteLine("stringRotation:");
                 string result = stringRotation(args[0].Trim('"', ','), int.Parse(args[1]));
                 Console.WriteLine($"{result}");
             }
