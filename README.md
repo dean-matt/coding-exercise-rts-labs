@@ -1,6 +1,6 @@
 # coding-exercise-rts-labs
 
-Contains a class that addresses the problem statement below. This problem statement was provided by RTS Labs.
+Contains a dotnet console application that addresses the problem statement below. This problem statement was provided by RTS Labs.
 
 ## Problem Statement
 
