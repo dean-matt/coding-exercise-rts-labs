@@ -74,5 +74,10 @@ namespace coding_exercise_rts_labs
 
             return result;
         }
+
+        static string stringRotation(string value, int rotationAmount)
+        {
+            return string.Empty;
+        }
     }
 }
