@@ -43,7 +43,7 @@ namespace coding_exercise_rts_labs
         {
             // How to solve:
             // - Compare the values in array to comparisonValue
-            //   - Save the value if is above or below comparisonValue
+            //   - Increment counters if the value is above or below comparisonValue
             //
             // Edge Cases:
             // - array conains no values that are above comparisonValue
@@ -52,7 +52,24 @@ namespace coding_exercise_rts_labs
             // - array contains no values
             // - array contains a single value
 
-            return new Dictionary<string, int>();
+            Dictionary<string, int> result = new Dictionary<string, int>();
+
+            result.Add("above", 0);
+            result.Add("below", 0);
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > comparisonValue)
+                {
+                    result["above"]++;
+                }
+                else if (array[i] < comparisonValue)
+                {
+                    result["below"]++;
+                }
+            }
+
+            return result;
         }
     }
 }
