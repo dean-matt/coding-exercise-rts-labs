@@ -7,12 +7,7 @@ namespace coding_exercise_rts_labs
     {
         static void Main(string[] args)
         {
-            if (args.Length < 2)
-            {
-                return;
-            }
-
-            if (args[0].StartsWith("["))
+            if (args.Length <= 2 && args[0].StartsWith("["))
             {
                 string[] parsedArg = new string[args.Length - 1];
 
@@ -39,6 +34,14 @@ namespace coding_exercise_rts_labs
                 }
 
                 Console.WriteLine("}");
+            }
+            else if (args.Length == 2)
+            {
+                string result = stringRotation(args[0], int.Parse(args[1]));
+            }
+            else
+            {
+                Console.WriteLine($"Input was not in either of the expected formats");
             }
         }
 
